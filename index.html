@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Graded 802.11n : Packet Delivery Modeling in Mobile 802.11n Networks" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Graded 802.11n</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/yongsen/graded_802.11n">View on GitHub</a>
+
+          <h1 id="project_title">Graded 802.11n</h1>
+          <h2 id="project_tagline">Packet Delivery Modeling in Mobile 802.11n Networks</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/yongsen/graded_802.11n/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/yongsen/graded_802.11n/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h2>Brief Description</h2>
+
+<p>Graded 802.11n is composed of packet delivery measurement on both network layer and device layer.</p>
+
+<h3>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes.</h3>
+
+<h3>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</h3>
+
+<h2>Files</h2>
+
+<h3>
+<strong>data</strong>: measured data including packet loss rate, packet failed rate, received signal strength, etc.</h3>
+
+<h3>
+<strong>DSWA</strong>: dynamic sliding window averaging</h3>
+
+<h3>
+<strong>gnuplot</strong>: demos of gnuplot of experimental results</h3>
+
+<h3>
+<strong>pktinfo</strong>: packet delivery measurement source files based on <em>ath9k</em>
+</h3>
+
+<h2>How to</h2>
+
+<p>For <strong>DSWA</strong></p>
+
+<h3><code>cd DSWA</code></h3>
+
+<h3><code>sudo make</code></h3>
+
+<h3><code>sudo DSWA</code></h3>
+
+<p>For <strong>pktinfo</strong></p>
+
+<h3>make sure the device information in <em>common.h</em> is exactly what you are going to track</h3>
+
+<h3><code>cd pktinfo</code></h3>
+
+<h3><code>sudo make</code></h3>
+
+<h3><code>sudo pktinfo</code></h3>
+
+<p>For <strong>gnuplot</strong></p>
+
+<h3>make sure the experimental results and <em>time.plt</em> are in the same folder</h3>
+
+<h3><code>gnuplot</code></h3>
+
+<h3><code>load time.plt</code></h3>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Graded 802.11n maintained by <a href="https://github.com/yongsen">yongsen</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
