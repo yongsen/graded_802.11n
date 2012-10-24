@@ -33,54 +33,49 @@
       <section id="main_content" class="inner">
         <h2>Brief Description</h2>
 
-<p>Graded 802.11n is composed of packet delivery measurement on both network layer and device layer.</p>
+<h3>Graded 802.11n is composed of packet delivery measurement on both network layer and device layer.</h3>
 
-<h3>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes.</h3>
+<ol>
+<li>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes. </li>
+<li>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</li>
+</ol><h2>Files</h2>
 
-<h3>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</h3>
-
-<h2>Files</h2>
-
-<h3>
-<strong>data</strong>: measured data including packet loss rate, packet failed rate, received signal strength, etc.</h3>
-
-<h3>
-<strong>DSWA</strong>: dynamic sliding window averaging</h3>
-
-<h3>
-<strong>gnuplot</strong>: demos of gnuplot of experimental results</h3>
-
-<h3>
+<ol>
+<li>
+<strong>data</strong>: measured data including packet loss rate, packet failed rate, received signal strength, etc.</li>
+<li>
+<strong>DSWA</strong>: dynamic sliding window averaging</li>
+<li>
+<strong>gnuplot</strong>: demos of gnuplot of experimental results</li>
+<li>
 <strong>pktinfo</strong>: packet delivery measurement source files based on <em>ath9k</em>
+</li>
+</ol><h2>How to</h2>
+
+<h3>For <strong>DSWA</strong>
 </h3>
 
-<h2>How to</h2>
+<ol>
+<li><code>cd DSWA</code></li>
+<li><code>sudo make</code></li>
+<li><code>sudo DSWA</code></li>
+</ol><h3>For <strong>pktinfo</strong>
+</h3>
 
-<p>For <strong>DSWA</strong></p>
+<ol>
+<li>make sure the device information in <em>common.h</em> is exactly what you are going to track</li>
+<li><code>cd pktinfo</code></li>
+<li><code>sudo make</code></li>
+<li>
+<p><code>sudo pktinfo</code></p>
 
-<h3><code>cd DSWA</code></h3>
-
-<h3><code>sudo make</code></h3>
-
-<h3><code>sudo DSWA</code></h3>
-
-<p>For <strong>pktinfo</strong></p>
-
-<h3>make sure the device information in <em>common.h</em> is exactly what you are going to track</h3>
-
-<h3><code>cd pktinfo</code></h3>
-
-<h3><code>sudo make</code></h3>
-
-<h3><code>sudo pktinfo</code></h3>
-
-<p>For <strong>gnuplot</strong></p>
-
-<h3>make sure the experimental results and <em>time.plt</em> are in the same folder</h3>
-
-<h3><code>gnuplot</code></h3>
-
-<h3><code>load time.plt</code></h3>
+<h3>For <strong>gnuplot</strong>
+</h3>
+</li>
+<li><p>make sure the experimental results and <em>time.plt</em> are in the same folder</p></li>
+<li><p><code>gnuplot</code></p></li>
+<li><p><code>load time.plt</code></p></li>
+</ol>
       </section>
     </div>
 
