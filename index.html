@@ -54,7 +54,7 @@ are running Linux kernel of 3.2.0-26 with modified ath9k wireless driver.</p>
 <li><p>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes. </p></li>
 <li><p>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</p></li>
 </ol><h3>
-<a name="measurement" class="anchor" href="#measurement"><span class="octicon octicon-link"></span></a>Measurement</h3>
+<a name="c-measurement" class="anchor" href="#c-measurement"><span class="octicon octicon-link"></span></a>c. Measurement</h3>
 
 <p>The measuremment experiments were conducted under 5.745GHz frequency band on channel 149, which encounters with less legacy interference. In both static and mobile experiments, UDP packets of 1500 bytes size are transmitted through <code>iperf</code>. To get accurate PDR measurement, some MAC layer mechanisms such as RTS/CTS and ACK are disabled, and also the spatial multiplexing power save mode. The packet delivery measurement of mobile 802.11n networks is carried out along different routes. The above experiments cover most of the key features of packet delivery in mobile 802.11n networks.</p>
 
