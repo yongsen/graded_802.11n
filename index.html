@@ -31,14 +31,37 @@
     <!-- MAIN CONTENT -->
     <div id="main_content_wrap" class="outer">
       <section id="main_content" class="inner">
-        <h2>Brief Description</h2>
+        <h2>
+<a name="1-brief-description" class="anchor" href="#1-brief-description"><span class="octicon octicon-link"></span></a>1. Brief Description</h2>
 
-<h3>Graded 802.11n is composed of packet delivery measurement on both network layer and device layer.</h3>
+<h3>
+<a name="a-platform" class="anchor" href="#a-platform"><span class="octicon octicon-link"></span></a>a. Platform</h3>
+
+<p>The AP module used in our experiments is TP-LINK’s TL-WRD4310 2.4/5GHz dual band gigabit router,
+which uses Atheros AR9580 radio chipset. It supports up to 3x3 MIMO and 300Mbps/450Mbps date rates
+for channel type of HT20/HT40. We conduct experiments with laptops in mobile, and the clients are using
+Atheros’s 802.11n wireless card AR9380 with 2.4/5GHz dual band and 3 spatial streams. All the clients
+are running Linux kernel of 3.2.0-26 with modified ath9k wireless driver.</p>
+
+<h3>
+<a name="b-algorithm" class="anchor" href="#b-algorithm"><span class="octicon octicon-link"></span></a>b. Algorithm</h3>
+
+<p>The following figure illustrates the software architecture of Graded 802.11n, which is composed of both network layer and device layer components.</p>
+
+<p><img src="http://yongsen.github.io/img/framework.jpg" alt="Framework of graded 802.11n"></p>
 
 <ol>
-<li>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes. </li>
-<li>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</li>
-</ol><h2>Files</h2>
+<li><p>The network layer conducts DSWA calculations to determine averaging intervals and sliding factor, and makes GradedT update to get rate selection indexes. </p></li>
+<li><p>On the device layer, it is driven by transmitting and receiving events that execute PDR computation and RSS averaging respectively. The rate indexes are also selected on device layer according to results of network layer when the PDR or RSS is lower than transmission threshold.</p></li>
+</ol><h3>
+<a name="measurement" class="anchor" href="#measurement"><span class="octicon octicon-link"></span></a>Measurement</h3>
+
+<p>The measuremment experiments were conducted under 5.745GHz frequency band on channel 149, which encounters with less legacy interference. In both static and mobile experiments, UDP packets of 1500 bytes size are transmitted through <code>iperf</code>. To get accurate PDR measurement, some MAC layer mechanisms such as RTS/CTS and ACK are disabled, and also the spatial multiplexing power save mode. The packet delivery measurement of mobile 802.11n networks is carried out along different routes. The above experiments cover most of the key features of packet delivery in mobile 802.11n networks.</p>
+
+<p><img src="http://yongsen.github.io/img/goodput3.jpg" alt="Measurement results of graded 802.11n"></p>
+
+<h2>
+<a name="2-files" class="anchor" href="#2-files"><span class="octicon octicon-link"></span></a>2. Files</h2>
 
 <ol>
 <li>
@@ -50,16 +73,19 @@
 <li>
 <strong>pktinfo</strong>: packet delivery measurement source files based on <em>ath9k</em>
 </li>
-</ol><h2>How to</h2>
+</ol><h2>
+<a name="3-how-to" class="anchor" href="#3-how-to"><span class="octicon octicon-link"></span></a>3. How to</h2>
 
-<h3>For <strong>DSWA</strong>
+<h3>
+<a name="a-for-dswa" class="anchor" href="#a-for-dswa"><span class="octicon octicon-link"></span></a>a. For <strong>DSWA</strong>
 </h3>
 
 <ol>
 <li><code>cd DSWA</code></li>
 <li><code>sudo make</code></li>
 <li><code>sudo DSWA</code></li>
-</ol><h3>For <strong>pktinfo</strong>
+</ol><h3>
+<a name="b-for-pktinfo" class="anchor" href="#b-for-pktinfo"><span class="octicon octicon-link"></span></a>b. For <strong>pktinfo</strong>
 </h3>
 
 <ol>
@@ -67,7 +93,8 @@
 <li><code>cd pktinfo</code></li>
 <li><code>sudo make</code></li>
 <li><code>sudo pktinfo</code></li>
-</ol><h3>For <strong>gnuplot</strong>
+</ol><h3>
+<a name="c-for-gnuplot" class="anchor" href="#c-for-gnuplot"><span class="octicon octicon-link"></span></a>c. For <strong>gnuplot</strong>
 </h3>
 
 <ol>
