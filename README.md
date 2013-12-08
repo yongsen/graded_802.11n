@@ -44,7 +44,7 @@ cd pktinfo
 
 sudo make
 
-sudo pktinfo
+sudo ./pktinfo
 
 
 For gnuplot
